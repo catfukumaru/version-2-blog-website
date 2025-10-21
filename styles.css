@@ -1,0 +1,161 @@
+/* css file for the home page */
+/* going to use grid instead of flex because it gives you more control */
+
+@font-face {
+    /* for the title */
+  font-family: 'StretchPro';
+  src: url('fonts/StretchPro.otf') format('opentype');
+  
+}
+
+@font-face {
+    /* for the menu */
+  font-family: 'AHN';
+  src: url('fonts/AtkinsonHyperlegibleNext-VariableFont_wght.ttf') format('truetype');
+  font-weight: bold;
+}
+
+/* headings */
+@font-face {
+  font-family: 'GeistMono';
+  src: url('fonts/GeistMono-VariableFont_wght.ttf') format('truetype');
+  font-weight: bold;
+}
+
+/* text */
+@font-face {
+  font-family: 'CruffySans';
+  src: url('fonts/CruyffSans-Regular.ttf') format('truetype');
+  font-weight: bold;
+}
+
+body{
+  width: minmax(500px, 1fr);
+}
+
+#hero_section{
+/* 1. to use grid you need to set the outmost container to grid */
+    display: grid;  /* grid – generates a block-level grid */
+
+
+/* 2. define the   columns and rows of the grid with a space-separated list of values*/
+/*  <track-size> – can be a length, a percentage, or a fraction of the free space in the grid using the fr unit (more on this unit over at DigitalOcean)
+<line-name> – an arbitrary name of your choosing or the order that the lines appears from the leftmost outer lne of the grid. the count starts at 1 and not 0*/
+    grid-template-columns: 75% 25%;
+    grid-template-rows: 25% 25%;
+    grid-template-areas: 
+    ". menu"
+    "title title";
+    /*  gaps between the rows, gaps between the columsn  */
+    margin: 1vh;
+    overflow: hidden;  /* Hides overflowed text */
+    
+}
+
+
+#hero_section .menu .home_button{
+   background-color: white;
+   color: black; 
+
+   font-family: 'AHN';
+
+
+   /* colour of the text */
+   border-radius: 62.18px;
+   padding: 10px 29px;
+   /*  the space between the text and the border of a button: height, width */
+   text-align: center;
+   font-size: 19.34px;
+   border-width: 2px;
+   /* border thickness */
+}
+
+
+#hero_section .menu{
+/* move the menut to the left*/
+  justify-self: end; 
+  align-self: start; 
+  grid-area: menu;
+}
+
+#hero_section .title{
+/* move the menut to the left*/
+  justify-self: start; 
+  align-self: end; 
+  grid-area: title; 
+  width: 1fr; 
+  height: 100%;
+
+}
+
+
+#hero_section .title h1{
+    font-size: 13.43vw;
+    font-family: 'StretchPro';
+
+}
+
+/* 
+
+Mission section
+
+*/
+
+
+#mission_section {
+    background-color: black;
+    width: 100%;
+    height: 70%;
+    display: grid; 
+    /* minmax(0, 1fr) */
+    grid-template-columns: minmax(0.3fr,1fr) minmax(0.4fr,2fr) minmax(0.3fr,1fr);
+    grid-template-rows: minmax(0.3fr,1fr) minmax(2.4fr,3fr) minmax(0.3fr,1fr);  
+    gap: 0px 0px; 
+    grid-template-areas: 
+        ". . ."
+        "mission_card . . "
+        ". . ."; 
+
+}
+/* not centred */
+#mission_section .mission_card{
+    margin: 20% 20%;
+    background-color: white;
+    color: black; 
+    border-radius: 90px;
+    padding: 5% 23%;
+    text-align: center;
+
+    justify-self: center; 
+    align-self: center; 
+    grid-area: mission_card; 
+    white-space: normal;  /* Ensures text wraps when necessary */
+    
+    
+    
+}
+
+#mission_section .mission_card .mission_title{
+  font-family: 'GeistMono';
+  /* white-space: nowrap; */
+  /* stops the text being squished in one column*//* stops the text being squished in one column*/
+  font-size: 4vw;
+  /* white-space: normal;  Ensures text wraps when necessary */
+}
+
+#mission_section .mission_card .mission_text{
+  font-family: 'CruffySans';
+  font-size: 3vw;
+  /* white-space: normal;  Ensures text wraps when necessary */
+
+}
+
+/* why the mission_card is centered */
+/* The reason the code centers the mission_card element within the mission_section is due to the CSS Grid layout combined with how the grid-template-areas and the justify-self and align-self properties are applied:
+
+- The mission_section uses a grid container with three columns and three rows defined by grid-template-columns and grid-template-rows. The middle row and first column contain the mission_card area as specified in grid-template-areas, positioning mission_card in the second row and first column cell of the grid.
+- The mission_card is assigned to the grid-area named "mission_card," ensuring it occupies that particular grid cell.
+- Within the mission_card CSS, justify-self: center and align-self: center center the card horizontally and vertically within its grid cell.
+- Despite margin: 20% 20%, the centering via justify-self and align-self within the grid cell takes precedence for alignment inside that cell.
+- The grid-template-columns and grid-template-rows use minmax with fractional units, giving flexible but balanced space distribution. Since mission_card is placed in the middle of the vertical grid but on the left horizontally (first column), it aligns centrally in that grid cell, which can appear visually centered vertically in the section though shifted horizontally to the left grid area. */
+
