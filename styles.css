@@ -159,3 +159,173 @@ Mission section
 - Despite margin: 20% 20%, the centering via justify-self and align-self within the grid cell takes precedence for alignment inside that cell.
 - The grid-template-columns and grid-template-rows use minmax with fractional units, giving flexible but balanced space distribution. Since mission_card is placed in the middle of the vertical grid but on the left horizontally (first column), it aligns centrally in that grid cell, which can appear visually centered vertically in the section though shifted horizontally to the left grid area. */
 
+
+
+
+#feature_section {
+  background-color: rgb(255, 255, 255);
+  width: 100vw;
+  min-height: 100vh;
+  list-style: none;
+
+  display: grid; 
+    grid-template-columns: 0.1fr 3.3fr 0.1fr; 
+  grid-template-rows: 1fr 1.8fr 0.5fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    ". title ."
+    "slider slider slider"
+    ". . ."; 
+  
+
+}
+
+#feature_section .feauture_title{
+  font-size: 4vw;
+  font-family: 'GeistMono';
+  padding-top: 30px;
+
+  justify-self: center; 
+  align-self: start; 
+  grid-area: title; 
+
+}
+
+  
+#caurosel{
+  background-color: white;
+  display: flex;
+  height: 400px;
+  
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-padding-top: 15vh;
+   
+  /* Hide scrollbar in Firefox */
+  scrollbar-width: none;
+
+  /* Hide scrollbar in IE and Edge */
+  -ms-overflow-style: none;
+
+  justify-self: stretch; 
+  align-self: center; 
+  grid-area: slider; 
+  
+}
+
+
+/* Hide scrollbar in webkit */
+.list::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+.content {
+  display:flex;
+  align-items: center;
+  justify-content: start;
+  padding:10vw;
+  width:80vw;
+  /* margin: 2vw;  */
+  height: 50%;
+
+}
+
+.content {
+  display:flex;
+  align-items: center;
+  justify-content: start;
+ 
+  white-space: nowrap;
+  /* background-color: #000000; */
+  background:
+      radial-gradient(circle at 4.45% 30.34%, rgba(255,255,255,0.4) 50%, rgba(2,2,3,0.4) 66.0%),
+      radial-gradient(circle at 64.65% 18.90%, rgba(255,255,255,0.2) 20%, rgba(0,0,0,0.4) 91%),
+      linear-gradient(to bottom, rgba(26,17,65,0.6) 0%, rgba(0,0,0,0.6) 100%);
+
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    color: black;
+
+  /* position: relative; */
+  z-index: 0;
+  /* color: white; */
+  /* transition: 0.6s ease-in; */
+  scroll-snap-align: start;
+  border-radius: 90px 90px 90px 90px;
+  
+  /* making the grid to put in the inner card and the title */
+  display: grid;
+  grid-template-columns: 0.1fr 3.4fr 0.1fr; 
+  grid-template-rows: 0.1fr 1.6fr 0.1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+        "title . ."
+        "text_card_container . . "
+        ". . ."; 
+
+
+
+  box-shadow: 10px 10px;
+  
+  
+}
+
+
+/* 
+.content:hover::before{
+  transition-delay:0.1s ;
+
+  transform: scale(40);
+}
+
+.content:hover{
+    background:
+      radial-gradient(circle at 4.45% 30.34%, rgba(255,255,255,0.4) 50%, rgba(2,2,3,0.4) 66.0%),
+      radial-gradient(circle at 64.65% 18.90%, rgba(255,255,255,0.2) 20%, rgba(0,0,0,0.4) 91%),
+      linear-gradient(to bottom, rgba(26,17,65,0.6) 0%, rgba(0,0,0,0.6) 100%);
+
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    color: black; */
+
+/* } */
+
+.content p{
+    padding: 0px 0px;
+    font-size: 3vw;
+    font-family: 'GeistMono';
+    grid-area: title; 
+    place-self: start start;
+
+   
+}
+
+.feature_text_container{
+    
+    background-color: white;
+    color: black; 
+    border-radius: 45px;
+    /* padding: 10% 10%; */
+    text-align: center;
+    width: 50vw;
+    height: 30vh;
+
+    justify-self: center; 
+    align-self: center; 
+    grid-area: text_card_container; 
+    white-space: normal;
+    
+}
+ul {
+  /* How do I get the bullets of an unordered list to center with the text? */
+  padding-left: 0px;
+  list-style-position: inside;
+  /* getting rid of bullet points */
+  list-style-type: none;
+  /* changing the font */
+  font-family:CruffySans;
+ 
+
+}

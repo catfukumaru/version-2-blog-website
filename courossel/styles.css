@@ -1,5 +1,52 @@
-#courossel .box{
-  width: 20px;
-  height: 100px;
-  
+/* Container uses flexbox to arrange items in a row */
+.list {
+  display: flex;
+
+  /* Adds horizontal spacing of 8px between items */
+  gap: 8px; 
+
+   /* Adds internal padding of 16px around the container */
+  padding: 16px;
+
+  /* Removes default bullet points from list items */
+  list-style: none;
+
+  /* Allows horizontal scrolling if content overflows */
+  overflow-x: scroll;
+
+  /* Enables snap scrolling along the x-axis with mandatory snapping */
+  /* Scroll snapping ensures that when a user scrolls through content,  */
+  scroll-snap-type: x mandatory;
+}
+
+.item {
+  /* Prevents items from shrinking smaller than their width */
+  flex-shrink: 0;
+
+  width: 80%;
+  height: 90vh;
+
+  background-color: red;
+
+  /* Aligns the item to the center in the scroll snap container */
+  /* specifies the alignment position of an element within a scroll container when snapping occurs during scrolling */
+  scroll-snap-align: center;
+}
+
+/* Styles the content inside each carousel item */
+.content {
+  display: flex;
+
+  /* Vertically centers the content within the item */
+  align-items: center;
+
+   /* Horizontally centers the content within the item */
+  justify-content: center;
+
+  /* Makes content fill the item’s height */
+  height: 100%;
+
+  font-family: sans-serif;
+  font-size: 64px;
+  font-weight: bold;
 }
