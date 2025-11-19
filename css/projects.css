@@ -1,0 +1,193 @@
+/* css file for the home page */
+/* going to use grid instead of flex because it gives you more control */
+
+@font-face {
+    /* for the title */
+  font-family: 'StretchPro';
+  src: url('../fonts/StretchPro.otf') format('opentype');
+  
+}
+
+@font-face {
+    /* for the menu */
+  font-family: 'AHN';
+  
+  src: url('../fonts/AtkinsonHyperlegibleNext-VariableFont_wght.ttf') format('truetype');
+  font-weight: bold;
+}
+
+/* headings */
+@font-face {
+  font-family: 'GeistMono';
+  src: url('../fonts/GeistMono-VariableFont_wght.ttf') format('truetype');
+  font-weight: bold;
+}
+
+/* text */
+@font-face {
+  font-family: 'CruffySans';
+  src: url('../fonts/CruyffSans-Regular.ttf') format('truetype');
+  font-weight: bold;
+}
+
+body{
+  width: minmax(500px, 1fr);
+  overflow-x: hidden; 
+
+}
+
+#hero_section{
+/* 1. to use grid you need to set the outmost container to grid */
+    display: grid;  /* grid – generates a block-level grid */
+
+
+/* 2. define the   columns and rows of the grid with a space-separated list of values*/
+/*  <track-size> – can be a length, a percentage, or a fraction of the free space in the grid using the fr unit (more on this unit over at DigitalOcean)
+<line-name> – an arbitrary name of your choosing or the order that the lines appears from the leftmost outer lne of the grid. the count starts at 1 and not 0*/
+    grid-template-columns: 75% 25%;
+    grid-template-rows: 25% 25%;
+    grid-template-areas: 
+    ". menu"
+    "title title";
+    /*  gaps between the rows, gaps between the columsn  */
+    margin: 3vh;
+    overflow: hidden;  /* Hides overflowed text */
+    
+}
+
+
+   
+
+#hero_section .menu .menu_button{
+  all: unset;
+  cursor: pointer; /* optional, to indicate it is clickable */
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#hero_section .menu .menu_button:hover{
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+
+#hero_section .menu{
+/* move the menut to the left*/
+  /* justify-self: end; 
+  align-self: start; 
+  grid-area: menu;
+
+  background-color: white;
+   color: black; 
+
+   font-family: 'AHN'; */
+
+
+   /* colour of the text */
+   /* border-radius: 62.18px;
+   padding: 10px 29px; */
+   /*  the space between the text and the border of a button: height, width */
+   /* text-align: center;
+   font-size: 15px;
+   border-width: 2px; */
+   /* border thickness */
+
+  white-space: nowrap;
+  display: flex;             /* Arrange children horizontally */
+  justify-content: flex-end; /* Align buttons to the left (start) */
+  align-items: center;       /* Vertically center buttons if they have varying heights */
+                /* Add horizontal spacing between buttons */
+
+  
+  /* color: black;  */
+  font-family: 'AHN';
+  border-style: solid;
+  border-color: black;
+  border-radius: 45px;
+  height: 50px;
+  border-width: 2px;
+}
+
+a {
+  color: black;
+  text-decoration: none; /* no underline */
+}
+
+a:hover{
+  color: white;
+}
+
+
+#hero_section .hero_title{
+/* move the menut to the left*/
+  justify-self: start; 
+  align-self: start; 
+  grid-area: title; 
+  color: black;
+
+  width: 1fr; 
+  height: 100%;
+  font-size: 8vw;
+  font-family: 'StretchPro';
+  padding:10% 20%;
+  text-align:center;
+}
+
+
+hr{
+  /* width:100%; */
+  
+  margin:0 auto;
+  color: black ;
+  border-top: 2px solid;
+  
+}
+
+
+#project_section{
+  
+  display: grid;
+  grid-template-columns: 0.3fr 2.4fr 0.3fr;
+  grid-template-rows: 1fr 1.5fr 0.5fr;
+  gap: 10px 5px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". project_title ."
+    ". project_description ."
+    ". project_date .";
+  background-color: black;
+  color: white;
+  opacity: 1;
+  transition: 0.3s;
+  margin: 40px 0px;
+}
+
+#project_section .project_title {
+  justify-self: stretch;
+  align-self: center;
+  grid-area: project_title;
+  font-family: 'GeistMono';
+  font-size: 4vw;
+  text-align: center;
+}
+
+#project_section .project_description {
+  align-self: center;
+  grid-area: project_description;
+  font-family: 'CruffySans';
+  font-size: 3vw;
+}
+
+#project_section .project_date {
+  align-self: center;
+  grid-area: project_date;
+  font-family: 'CruffySans';
+  font-size: 2vw;
+}
+
+#project_section:hover{
+  cursor: pointer;
+  opacity: 0.6;
+
+}

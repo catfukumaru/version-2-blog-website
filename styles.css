@@ -437,3 +437,52 @@ footer {
   padding-right:10px ;
 }
 
+
+
+
+/* fixing the size lookng too big in larger screens */
+@media (min-width: 1200px) {
+  #hero_section .title {
+    font-size: 6vw; /* Scales down on larger screens */
+  }
+
+  #mission_section .mission_card .mission_title{
+    font-size: 2vw;
+  }
+
+  #mission_section .mission_card .mission_text{
+    font-size: 1vw;
+  }
+
+.feauture_title {
+  font-size: 2vw;
+}
+
+.hwi-title {
+  font-size: 2vw;
+}
+
+.hwi-numbered-label{
+  font-size: 2vw;
+}
+
+.hwi-numbered-icon{
+  width: 4vw;
+  height: 4vw;
+}
+
+.hwi-single-item-text{
+  font-size: 2vw;
+}
+
+footer {
+  width: 100%;
+  height: 10%;
+}
+
+.footer_text {
+  font-size: 2vw;
+}
+
+
+}
