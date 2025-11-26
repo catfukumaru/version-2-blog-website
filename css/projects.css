@@ -130,7 +130,7 @@ a:hover{
   height: 100%;
   font-size: 8vw;
   font-family: 'StretchPro';
-  padding:10% 20%;
+  padding:20% 20%;
   text-align:center;
 }
 
@@ -162,6 +162,7 @@ hr{
   transition: 0.3s;
   margin: 40px 0px;
 }
+ 
 
 #project_section .project_title {
   justify-self: stretch;
@@ -190,4 +191,47 @@ hr{
   cursor: pointer;
   opacity: 0.6;
 
+}
+
+footer {
+  display: grid;
+  grid-template-columns: 0.6fr 1.4fr;
+  grid-template-rows: 1fr 0fr;
+  gap: 0 20px; /* horizontal gap 10px */
+  justify-items: stretch;
+  align-items: stretch;
+  grid-template-areas: 
+  "footer-logo footer_text"
+  "footer-logo footer_copyright";
+
+  width: 100%;
+  height: 30%;
+  background-color: #000000;
+  /* adjust height as needed */
+  color: white;
+}
+
+.footer-logo {
+  grid-area: footer-logo;
+  justify-self: end;
+  align-self: center;
+}
+
+.footer_text {
+  grid-area: footer_text;
+  justify-self: stretch;
+  align-self: end;
+  font-size: 4vw;
+  font-family: 'StretchPro';
+
+}
+
+.footer_copyright{
+
+  font-size: 1vw;
+  font-family: 'StretchPro';
+  grid-area:footer_copyright;
+  align-self: end;
+  justify-self: end;
+  padding-right:10px ;
 }

@@ -1,0 +1,207 @@
+<!-- the home page -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/article_2.css" /> 
+    <title>Ways to find prime numbers using Python</title>
+ </head>
+ <body>
+    <!-- make a notification saying that the website is best viewed on desktop -->
+    <div id="hero_section"> 
+        <!-- block level identification -->
+        <div class="menu">
+            <button class="menu_button"> <a href="../index.html">HOME</a></button>
+            <button class="menu_button"><a href="projects.html">PROJECTS</a></button>
+            <button class="menu_button"><a href="articles.html">ARTICLES</a></button>
+            <button class="menu_button"><a href="about_me.html">ABOUT ME</a></button>
+            
+            <!-- the menu -->
+        </div>
+
+        <div class="hero_title">
+            <h1 class ="title">Part 1 of Making a complex AI agent.</h1>
+        </div>
+        
+        
+    </div>
+    <hr>
+
+    <div class="page">
+    <div id= "description_section">
+        <div class="description_container">
+           
+            <h2 id="introduction" class="headiing">Introduction</h2>
+            <p>This is me documenting my progress of becoming a better python developer through AI projects and updating my skills. In more detail, this is a series of articles where I talk about my experience as I develop these programs. Hence, I will not have any explanations on topics.</p>
+
+            <h2 id="contents" class="headiing">Contents</h2>
+
+            <ul>
+                <li>1. Introduction</li>
+                <li>2. Why I choose to develop programs using a new method</li>
+                <li>3. Aim</li>
+                <li>4. First AI project</li>
+                <li>5. Second project</li>
+                <li>6. Third Project</li>
+                <li>7. Research for preparation for the merge project</li>
+                <li>8. Final project</li>
+                <li>9. conclusion</li>
+            </ul>
+
+
+            <h2 id="why-i-choose-to-develop-programs-using-a-new-method" class="headiing">Why I choose to develop programs using a new method</h2>
+            <p>I would normally learn all the basics from the usual resources: videos and articles. Then I would do coding exercises from different platforms and websites. The thing about this is that this method does not allow me to apply what I have learnt into a technical/complex program. I also ended up doing projects that are too easy (Fibonacci sequence or guess the number) and I don’t grow as a developer because I focus on completion, testing, documentation. These things are not bad but I am not going to get better if I just focus on those things.</p>
+            <p>So, I decided to go for another method.</p>
+            <p>I have decided to complete intermediate projects that others had already done first. Then do an advanced project.  I would have an easier time and have the tools necessary to do an advanced project without it being so daunting because I would not have to start from scratch.</p>
+
+            <h2 id="aim" class="headiing">Aim</h2>
+            <p>My aim is to make an AI that uses my computer as its resource. I would be able to ask question about what does “document.pdf” say in 2 paragraphs or check my outlook and see if I have new emails on a specific topic.</p>
+
+            <h2 id="first-ai-project" class="headiing">First AI project</h2>
+            <p>It is a simple AI agent using Ollama. I used the same model and IDE as the one in the video.</p>
+            <p>This is the link: <a href="https://www.youtube.com/watch?v=d0o89z134CQ" class="article_link">https://www.youtube.com/watch?v=d0o89z134CQ</a></p>
+
+            <h3 id="what-i-learnt" class="headiing">What I learnt:</h3>
+
+            <ul>
+                <li>I learnt the basics of making an AI model</li>
+                <li>Bringing the model into the program.</li>
+                <li>Making templates.</li>
+                <li>Channing the template and the model.</li>
+                <li>Making a conversation history.</li>
+                <li>Taking a prompt from the user.</li>
+            </ul>
+
+            <p>I my opinion it was easier than I thought. I thought that I would have to pay for an API (which you can but I am not) or make the AI from scratch.</p>
+            <p>At this point I thought that I would be ready for anything. I would be able to easily code the any project. Just a few more if statements and open some files. </p>
+            <p>But… I was quite wrong.</p>
+
+            <h2 id="second-project" class="headiing">Second project</h2>
+            <p>Explain the code: An AI agent that is able to search the internet. It uses agents to:</p>
+            <ul>
+                <li>Make a decision if the user prompt should be answered using the internet.</li>
+                <li>Makes a search query.</li>
+                <li>Analyses the data scraped.</li>
+                <li>Another that selects the best search results.</li>
+                <li>Generate a response to the user.</li>
+            </ul>
+
+            <p >This is the link: <a href="https://www.youtube.com/watch?v=9KKnNh89AGU" class="article_link">https://www.youtube.com/watch?v=9KKnNh89AGU</a></p>
+
+            <h3 id="what-i-learnt-1" class="headiing">What I learnt:</h3>
+            <ul>
+                <li>Each agent has its own template and they all work in the same way.</li>
+                <li>I thought that there could only be one agent per file since the would have to work concurrently.</li>
+                <li>I learnt about retrieving data from a search result compared to a website</li>
+                <li>I learnt about streams - you can wait for the full response or use the chunks individually</li>
+                <li>There is another way to make agents without a template</li>
+            </ul>
+
+            <h3 id="things-i-thought-about-to-improve-the-code" class="headiing">Things I thought about to improve the code:</h3>
+
+            <ul>
+                <li>I could compress the context once it gets to a certain size but I don&#39;t know if it&#39;ll be relevant cause it would need to add more functions to decrypt it.</li>
+                <li>I could measure the big O of the program and find where the bottlenecks are.</li>
+                <li>I realised that I needed more understanding in chaining.</li>
+                <li>Issues that I found with the model I was using until now (llama3:latest):</li>
+                <li>It takes a lot of space. It cannot run with a lot of other programs running in the background</li>
+                <li>For now, I will keep using llama3:latest because I don’t what to break the first program and not use more space in the RAM for another one.</li>
+            </ul>
+
+            <h2 id="third-project" class="headiing">Third Project</h2>
+            <p>It is an AI agent that looks at a database filled with data from a document for the answers.</p>
+            <p>This is the link: <a href="https://www.youtube.com/watch?v=E4l91XKQSgw" class="article_link">https://www.youtube.com/watch?v=E4l91XKQSgw</a></p>
+            <p>I noticed that this project doesn&#39;t have context/history. Which I thought was strange since it would not be able to customise the response for the user but once I thought about it, I think it makes sense because the purpose it retrieves information from the document.</p>
+
+            <h2 id="i-learnt-about" class="headiing">I learnt about</h2>
+            <ol>
+                <li>How to add the results from the vector into the model.</li>
+                <li>A RAG with a foundational definition for RAG.</li>
+                <li>How to use a vector database.</li>
+                <li>How to use a document.</li>
+                <li>Basics on getting information from a csv file.</li>
+                <li>How to not always regenerate something and find if it exists.</li>
+                <li>What is a document.</li>
+                <li>That you don&#39;t always need history.</li>
+            </ol>
+            <p>I am guessing that depending on the file there is a module to retrieve information from it and do things with that data so file.open() is not relevant, maybe?</p>
+
+            <h2 id="research-for-preparation-for-the-merge-project" class="headiing">Research for preparation for the merge project</h2>
+            <p>I decided to some research for the final project of part 1 because I did not understand everything in the programs I had copied. I knew I needed a good base understanding for when I would have to make the next project on my own.</p>
+            <p>Things I learnt:</p>
+            <ul>
+                <li>I learnt more about chaining. How does it work exactly and if there are other ways to chain templates with models.</li>
+                <li>I also learnt about the attributes in Document and Chroma classes.</li>
+                <li>Why there is a need for a document and a vector store when the file is already in the computer.</li>
+            </ul>
+
+            <p>I looked at videos on different AI topics that are focused on llama</p>
+
+            <p>Things I learnt from the videos:</p>
+            <ul>
+                <li>There are different types of complex templates depending on the model and each has its own syntax.</li>
+                <li>What is a model file and how to change it</li>
+                <li>What is context size and how to change it.</li>
+                <li>The RAG process.</li>
+                <li>What is the difference between a template and a model file.</li>
+                <li>There are different embedding modules.</li>
+                <li>The addition of data is done in a way that adheres to the format to vector store.</li>
+            </ul>
+
+            <p>At this point I felt scared but prepared for the task ahead.</p>
+
+            <h2 id="final-project" class="headiing">Final project</h2>
+            <p>To test myself I decided to make this project.</p>
+            <p>It is a combination of the second and third project. An AI that can look for documents or the internet for an answer.</p>
+            <p>I used the files for the online search AI project as a base.</p>
+            <p>I made a flowchart for the program</p>
+            
+
+            <h3 id="what-i-learnt-that" class="headiing">What I learnt that:</h3>
+            <ul>
+                <li>The syntax issues where the biggest problems that I had because I did not notice them early enough.</li>
+                <li>It was not as hard I thought but I spent lots of time trying to translate the flowchart into code and making sure that the original program doesn’t breaks.</li>
+                <li>I also learnt how to change a system message for a use case. I tweaked one of the message templates for the agent that I made that decided whether it should look up the documents.</li>
+                <li>I learnt about activating venv for my windows laptop</li>
+                <li>As much as I focus on documentation it can slow down the progress. So, I decided to take a leap and not document things that were not necessary or easy to understand or add unnecessary definition of things.</li>
+                <li>I can refactor a program and not break it.</li>
+            </ul>
+
+            <h3 id="things-to-improve" class="headiing">Things to improve:</h3>
+            <ul>
+                <li>I should have made tests for the program.</li>
+                <li>Make an agent that checks the data in the document is useful.</li>
+                <li>Make the template for the search document or not agent more robust.</li>
+                <li>Changed the model used. It was really slow.</li>
+                <li>Fix the hallucinations from the model when it gives a response using the document.</li>
+            </ul>
+
+            <h2 id="conclusion" class="headiing">Conclusion</h2>
+            <p>I have learnt a lot from this experience and I am excited to do another project.</p>
+            <p>You can find my attempts at my GitHub called Portfolio.</p>
+            <p>See you next time. You will get an update in 2 weeks.</p>
+
+
+        </div>
+       
+    </div>
+    <!-- <div class="article_container"></div> -->
+    
+
+    <!-- <footer>
+        <div class="footer-logo">
+            <img src="../assets/logo.svg" alt="logo" style="width:10vh;height:10vh;">
+        </div>
+        <div class="footer_text">
+            <p>Heart Thoughts</p>
+            
+        </div>
+        <div class="footer_copyright">
+            <p>© 2025 Milagros Omoruyi Ihrdal. All rights reserved.</p>
+        </div> 
+    </footer> -->
+    </div>
+     
+ </body>
+ </html>

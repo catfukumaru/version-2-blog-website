@@ -31,8 +31,9 @@
 }
 
 body{
-  width: minmax(500px, 1fr);
-  overflow-x: hidden; 
+  /* width: minmax(500px, 1fr);
+  overflow-x: hidden;  */
+  min-height: 100%; position: relative; 
 
 }
 
@@ -50,9 +51,15 @@ body{
     ". menu"
     "title title";
     /*  gaps between the rows, gaps between the columsn  */
-    margin: 3vh;
+    margin: 1vh;
     overflow: hidden;  /* Hides overflowed text */
     
+  background-color: #ffffff;
+  background-image:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.2) 1px, transparent 1px),
+    linear-gradient(rgba(0, 0, 0, 0.2) 1px, transparent 1px);
+  background-size: 20px 20px;
+  
 }
 
 
@@ -63,6 +70,7 @@ body{
   cursor: pointer; /* optional, to indicate it is clickable */
   padding-left: 10px;
   padding-right: 10px;
+  
 }
 
 #hero_section .menu .menu_button:hover{
@@ -99,6 +107,7 @@ body{
   align-items: center;       /* Vertically center buttons if they have varying heights */
                 /* Add horizontal spacing between buttons */
 
+  background-color: #ffffff;
   
   /* color: black;  */
   font-family: 'AHN';
@@ -118,20 +127,29 @@ a:hover{
   color: white;
 }
 
+.article_link:hover{
+  color: black;
+}
 
 #hero_section .hero_title{
-/* move the menut to the left*/
-  justify-self: start; 
-  align-self: start; 
+  display: grid;
+/* move the menu to the left*/
   grid-area: title; 
   color: black;
+  /* padding-top: 100px; */
+  height: 300px;
+ 
+  
+}
 
-  width: 1fr; 
-  height: 100%;
-  font-size: 8vw;
+#hero_section .hero_title .title{
+  font-size: 4vw;
   font-family: 'StretchPro';
-  padding:20% 20%;
-  text-align:center;
+  justify-self: center;
+  align-self: center;
+  text-align: center;
+
+  
 }
 
 
@@ -145,53 +163,24 @@ hr{
 }
 
 
-#project_section{
+#description_section{
   
-  display: grid;
-  grid-template-columns: 0.3fr 2.4fr 0.3fr;
-  grid-template-rows: 1fr 1.5fr 0.5fr;
-  gap: 10px 5px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    ". project_title ."
-    ". project_description ."
-    ". project_date .";
-  background-color: black;
-  color: white;
-  opacity: 1;
-  transition: 0.3s;
-  margin: 40px 0px;
-  border-radius: 45px;
-  width: 80%;
-  place-self: center;
+  height: 700px;
+
+  margin: 20px;
 }
 
-#project_section .project_title {
-  justify-self: stretch;
-  align-self: center;
-  grid-area: project_title;
-  font-family: 'GeistMono';
-  font-size: 4vw;
-  text-align: center;
-}
 
-#project_section .project_description {
-  align-self: center;
-  grid-area: project_description;
-  font-family: 'CruffySans';
-  font-size: 3vw;
-}
-
-#project_section .project_date {
-  align-self: center;
-  grid-area: project_date;
-  font-family: 'CruffySans';
+#description_section .description_container{
+  font-family: 'CruffySans'; 
+  width: 95%;
+  text-wrap: balance;
   font-size: 2vw;
 }
 
-#project_section:hover{
-  cursor: pointer;
-  opacity: 0.6;
+
+#description_section .description_container .headiing{
+  font-family: 'GeistMono'; 
 
 }
 
@@ -207,10 +196,12 @@ footer {
   "footer-logo footer_copyright";
 
   width: 100%;
-  height: 30%;
+  height: 7%;
   background-color: #000000;
   /* adjust height as needed */
   color: white;
+  position: absolute; 
+
 }
 
 .footer-logo {

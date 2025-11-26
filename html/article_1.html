@@ -1,0 +1,113 @@
+<!-- the home page -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/article_1.css" /> 
+    <title>Ways to find prime numbers using Python</title>
+ </head>
+ <body>
+    <!-- make a notification saying that the website is best viewed on desktop -->
+    <div id="hero_section"> 
+        <!-- block level identification -->
+        <div class="menu">
+            <button class="menu_button"> <a href="../index.html">HOME</a></button>
+            <button class="menu_button"><a href="projects.html">PROJECTS</a></button>
+            <button class="menu_button"><a href="articles.html">ARTICLES</a></button>
+            <button class="menu_button"><a href="about_me.html">ABOUT ME</a></button>
+            
+            <!-- the menu -->
+        </div>
+
+        <div class="hero_title">
+            <h1 class ="title">Ways to find prime numbers using Python</h1>
+        </div>
+        
+        
+    </div>
+    <hr>
+
+    <div id= "description_section">
+        <div class="description_container">
+           
+            <h2 class="headiing">Intro</h2>
+            <p>In this article I will discuss simple methods to find primes numbers. I know that my code is not optimised but the focus is on understanding the code instead of the fastest solution.</p>
+
+            <h2 class="headiing">1. The basic definitions you should know</h2>
+            <h3 class="headiing">1. What is division</h3>
+            <p>Division is defined as <code>ax = b</code> for any integer <code>x</code>, then we say that <code>a</code> divides <code>b</code>, or <code>a|b</code>. Conversely, if <code>ax≠b</code>, then <code>a</code> does not divide <code>b</code>, or <code>a ∤ b</code>.</p>
+            <p>Ie <code>3 x 2 = 6</code> where <code>a</code> is <code>3</code>, <code>x</code> is <code>2</code> and <code>b</code> is <code>6</code>. Hence <code>3</code> divides <code>6</code>.</p>
+
+            <h3 class="headiing">2. What is a prime number</h3>
+            <p>If an integer <code>p</code> has no divisor other than <code>1</code> and itself, else it is a composite number.</p>
+
+            <h2 class="headiing">2. Ways to find if a number is prime</h2>
+            <p>Properly defining the question: find if the integer <code>n</code> is prime.</p>
+
+            <h3 class="headiing">1. Loop through each 2 to n-1</h3>
+            <pre><code>def simple_prime_checker(n):
+            for i in range(2, n-1): # 1 and the number itself are not checked because we are looking if there is another multiple
+                if n % i == 0: 
+                    return False # if there is at one element that gives no remainder then the number is not prime
+            return True
+            </code></pre>
+
+            <h3 class="headiing">2. Loop through between 2 and sqrt of n</h3>
+            <h4 class="headiing">Why only up to sqrt n?</h4>
+            <p>If <code>n</code> can be expressed as a product of two integers <code>a</code> and <code>b</code> (i.e., <code>n=a×b</code>), then at least one of those integers must be less than or equal to <code>n</code>. This is because if both <code>a</code> and <code>b</code> were greater than <code>n</code>, their product <code>a×b</code> would exceed <code>n</code>.</p>
+            <pre><code>import math
+            def simple_prime_checker(n):
+            n = float(n)
+            for i in range(2, math.ceil(math.sqrt(n))): # 1 and the number itself are not checked because we are looking if there is another multiple
+                if n % i == 0:
+                    return False # if there is at one element that gives no remainder then the number is not prime
+            return True
+            </code></pre>
+
+            <h3 class="headiing">3. Sieve of Eratosthenes</h3>
+            <p>It marks all the multiples of all the prime numbers in the range as not being prime starting from 1. The numbers that are left are considered prime.</p>
+            <pre><code>def sieve(n):
+            is_prime = [True] * (n + 1) # the list represents that all the numbers are prime
+            is_prime[0] = is_prime[1] = False # 0 and 1 are not prime
+
+            for p in range(2, n):
+                if is_prime[p]: # if the number is prime
+                    for multiple in range(p * p, n + 1, p): # mark all the multiples as False
+                        is_prime[multiple] = False
+
+            primes = [p for p in range(n + 1) if is_prime[p]] # collect all the indices that are still True
+            return primes
+
+            def is_it_prime(n): # checks if the number is a prime by checking the numbers given by the sieve
+            primes = sieve(n)
+            if n in primes:
+                return True
+            return False
+             </code></pre>
+        </div>
+    </div>
+
+        
+       
+    
+    <!-- <div class="article_container"></div> -->
+    
+
+    <!-- <footer>
+            <div class="footer-logo">
+                <img src="../assets/logo.svg" alt="logo" style="width:10vh;height:10vh;">
+            </div>
+            <div class="footer_text">
+                <p>Heart Thoughts</p>
+            
+            </div>
+            <div class="footer_copyright">
+                <p>© 2025 Milagros Omoruyi Ihrdal. All rights reserved.</p>
+            </div>
+            
+            
+        </footer> -->
+     
+ </body>
+ </html>

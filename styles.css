@@ -50,13 +50,12 @@ body{
     ". menu"
     "title title";
     /*  gaps between the rows, gaps between the columsn  */
-    margin: 1vh;
+    margin: 3vh;
     overflow: hidden;  /* Hides overflowed text */
     
 }
 
 
-   
 
 #hero_section .menu .menu_button{
   all: unset;
@@ -107,6 +106,10 @@ body{
   border-radius: 45px;
   height: 50px;
   border-width: 2px;
+  
+
+
+
 }
 
 a {
