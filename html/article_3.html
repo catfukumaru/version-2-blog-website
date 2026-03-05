@@ -1,0 +1,138 @@
+<!-- the home page -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/article_2.css" /> 
+    <title>Ways to find prime numbers using Python</title>
+ </head>
+ <body>
+    <!-- make a notification saying that the website is best viewed on desktop -->
+    <div id="hero_section"> 
+        <!-- block level identification -->
+        <div class="menu">
+            <button class="menu_button"> <a href="../index.html">HOME</a></button>
+            <button class="menu_button"><a href="projects.html">PROJECTS</a></button>
+            <button class="menu_button"><a href="articles.html">ARTICLES</a></button>
+            <button class="menu_button"><a href="about_me.html">ABOUT ME</a></button>
+            
+            <!-- the menu -->
+        </div>
+
+        <div class="hero_title">
+            <h1 class ="title">A concise  introduction to XAI and its methods </h1>
+        </div>
+        
+        
+    </div>
+    <hr>
+
+    <div class="page">
+        <div id= "description_section">
+            <div class="description_container">
+            
+
+                <h2 id="introduction" class="headiing">Introduction</h2>
+                <p>This article is an introduction to explainable AI. I will go through the definition, reasons why its is needed and a variety of techniques that can be used to implement it. </p>
+                
+                <h2 id="why-xai-is-necessary" class="headiing">why XAI is necessary</h2>
+                
+                <p>XAI is necessary to be able:  </p>
+                <ol>
+                    <li>To justify the AI&#39;s response.</li>
+                    <li>To explain its reasoning.</li>
+                    <li>To discover new ways of solving problem.</li>
+                    <li>To improve existing processes.This article is an introduction to explainable AI. I will go through the definition, reasons why its is needed and a variety of techniques that can be used to implement it.</li>
+                    <li>To empower users to evaluate the output of the model.</li>
+                    <li>To learn new knowledge from the model.</li>
+                    <li>To trust it more in high stake areas like healthcare.</li>
+                </ol>
+
+
+
+                <h2 id="real-life-applications-of-xai" class="headiing">Real life applications of XAI</h2>
+                
+                <ol>
+                    <li>Used by regulators to certify the competency of models.</li>
+                    <li>Used by managers and executives to  asses how well the models meet the requirements.</li>
+                    <li>To improve product efficiency.</li>
+                    <li>Verify the decision made by the model.</li>
+                    <li>AI has the potential to better assess risks for recidivism.</li>
+                    <li>To give investment advice.</li>
+                </ol>
+
+                <h2 id="explain-definitions" class="headiing">Explain definitions</h2>
+                
+                <p>There are  definitions that are needed to be defined before I tell you the definition of XAI and get into the rest of the article. In this section.</p>
+                    <h3 id="1-explainability" class="headiing">1. Explainability</h3>
+                        <p>Means the ability to describe the model’s black-box behaviour. There are 4  maxims that must be followed by explanations: </p>
+                        <pre><code><span class="hljs-number">1.</span> Quality:  Finds out <span class="hljs-keyword">the</span> correct explanation.
+                        <span class="hljs-number">2.</span> Quantity: Deliver <span class="hljs-keyword">the</span> appropriate amount <span class="hljs-keyword">of</span> information that is informative.
+                        <span class="hljs-number">3.</span> Relation: An explanation must contain only information relevant <span class="hljs-built_in">to</span> <span class="hljs-keyword">the</span> discussion. 
+                        <span class="hljs-number">4.</span> Manner: <span class="hljs-keyword">the</span> information should be  delivered <span class="hljs-keyword">in</span> this manner: 
+                            <span class="hljs-number">1.</span> no ambiguous <span class="hljs-keyword">words</span>. 
+                            <span class="hljs-number">2.</span> no ambiguous explanations. 
+                            <span class="hljs-number">3.</span> <span class="hljs-keyword">the</span> explanation should be concise. 
+                            <span class="hljs-number">4.</span> information should be <span class="hljs-keyword">in</span> order. 
+                        <span class="hljs-number">5.</span> Context-oriented: Explanations should depend <span class="hljs-keyword">on</span> <span class="hljs-title">type</span> <span class="hljs-title">of</span> <span class="hljs-title">user</span>, <span class="hljs-title">i</span>.<span class="hljs-title">e</span>. <span class="hljs-title">developer</span>, <span class="hljs-title">regulator</span>, <span class="hljs-title">customer</span>, <span class="hljs-title">etc</span>.
+                        </code></pre><h3 id="2-interpretability" class="headiing">2. Interpretability</h3>
+                        <p>The ability to explain or to provide the meaning of something in understandable terms to a human.</p>
+                
+                    <h3 id="3-transparency" class="headiing">3. Transparency</h3>
+                        <p>a model is considered to be transparent if by itself it is understandable. </p>
+                    <h3 id="4-understandability-intelligibility" class="headiing">4. Understandability/ intelligibility</h3>
+                        <p>Explains the characteristic of a model to make a human understand how the model works – without  explaining its internal structure or the algorithms.</p>
+                    <h3 id="5-comprehensibility" class="headiing">5. Comprehensibility</h3>
+                        <p>The ability to represent what a model has learned in a human understandable fashion</p>
+                    <h3 id="6-fairness" class="headiing">6. Fairness</h3>
+                        <p>A model’s ability to make unbiased decisions.</p>
+                    <h3 id="7-robustness" class="headiing">7. Robustness</h3>
+                        <p>The sensitivity of the system’s output to a change in the input. </p>
+                    <h3 id="8-causality" class="headiing">8. Causality</h3>
+                        <p>Measures the change in the predicted output. </p>
+                    <h3 id="9-satisfaction" class="headiing">9. Satisfaction</h3>
+                        <p>The ability to improve the usability and utility of the model.</p>
+                    <h3 id="10-stability"  class="headiing">10. Stability</h3>
+                        <p>The ability  to provide comparable explanations for inputs that are similar.</p>
+                    <h3 id="black-box-white-box-and-grey-box-models" class="headiing">Black-box, white-box and grey-box models</h3>
+                        <p>A white-box or a glass-box model are models that can be understood by glancing at the summary or parameters of the model without the need for an external model to provide an explanation. </p>
+                        <p>A grey-box model  are models that users can interpret at some degree if they are carefully designed.</p>
+                        <p>A black box model is one where you just don&#39;t get how it works.</p>
+                
+                <p>​</p>
+                
+                <h2 id="defining-xai" class="headiing">Defining XAI</h2>
+                    <p>There is no standard definition of explainable AI. For this article I will adopt the definition of DARPA, XAI aims to ‘‘produce more explainable models, while maintaining a high level of learning performance (prediction accuracy); and enable human users to understand, appropriately, trust, and effectively manage the emerging generation of artificially intelligent partners’’.</p>
+                
+                <h2 id="explainability-methods" class="headiing">Explainability methods</h2>
+                    <p>There are a variety of methods with their advantages and disadvantages.</p>
+                    <h3 id="surrogation" class="headiing">Surrogation</h3>
+                        <p>A separate  model is created to explain the black-box decision either locally or globally and this interpretable.</p>
+                    <h3 id="locally-interpretable-model-agnostic-explainer-lime-" class="headiing">Locally Interpretable Model-Agnostic Explainer (LIME)</h3>
+                        <p> LIME finds out what happens to predictions when different inputs are fed into the  model. LIME creates a new dataset using changed samples and the black-box model’s predictions. LIME then uses this dataset to build an interpretable model that is weighted by the sampled instances’ closeness to the instance of interest.</p>
+                    <h3 id="local-rule-based-explanation-lore-" class="headiing">Local Rule-based Explanation (LORE)</h3>
+                        <p>Uses an ad-hoc ‘‘genetic algorithm’’ to generate a  set of neighbour instances of the given instance, from which a decision tree classifier can be made. </p>
+                    <h3 id="cluster-representatives-with-lime-clurefi-" class="headiing">Cluster Representatives with LIME (CluReFI)</h3>
+                        <p>First, LIME is used to describes the representation of a cluster once the data has been clustered. After allocating an unknown data instance to the closest cluster,  cluster assignments are visualized. Then, CluReFI visualizes each cluster’s feature validity ranges for the most essential features. CluReFI shows the user the most significant aspects that contribute to the class for their representation</p>
+                    <h3 id="submodular-pick-sp-lime-" class="headiing">Submodular Pick (SP)-LIME.</h3>
+                        <p> SP-LIME is a strategy for identifying the must important model predictions. The number of events to examine is chosen to be as large as possible so that the model can be understood. </p>
+                
+                <h2 id="conclusion" class="headiing">Conclusion</h2>
+                    <p>In this article I have discussed the meaning, characteristics and methods used for XAI.</p>
+                
+                <h2 id="references" class="headiing">References</h2>
+                    <ol>
+                        <li>Peeking Inside the Black-Box: A Survey on Explainable Artificial Intelligence (XAI)</li>
+                        <li>Explainable Artificial Intelligence (XAI): Concepts, taxonomies, opportunities and challenges toward responsible AI</li>
+                        <li>Explainable Artificial Intelligence (XAI): What we know and what is left to attain Trustworthy Artificial Intelligence</li>
+                    </ol>
+
+
+
+            </div>
+        </div>
+    </div>
+     
+ </body>
+ </html>
