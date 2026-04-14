@@ -1,0 +1,97 @@
+<!-- the home page -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/article_2.css" /> 
+    <title>Ways to find prime numbers using Python</title>
+ </head>
+ <body>
+    <!-- make a notification saying that the website is best viewed on desktop -->
+    <div id="hero_section"> 
+        <!-- block level identification -->
+        <div class="menu">
+            <button class="menu_button"> <a href="../index.html">HOME</a></button>
+            <button class="menu_button"><a href="projects.html">PROJECTS</a></button>
+            <button class="menu_button"><a href="articles.html">ARTICLES</a></button>
+            <button class="menu_button"><a href="about_me.html">ABOUT ME</a></button>
+            
+            <!-- the menu -->
+        </div>
+
+        <div class="hero_title">
+            <h1 class ="title">Beyond Bits -  An Introduction to Computation over the Reals. A summary part 2</h1>
+        </div>
+        
+        
+    </div>
+    <hr>
+
+    <div class="page">
+        <div id= "description_section">
+            <div class="description_container">
+                <p>Date: 14/04/26</p>
+                
+                
+                    <h2 id="introduction" class="headiing">Introduction</h2>
+                    <p> In this article  I present the last section of the summary of the first chapter of the article</p>
+                    <h2 id="chap-1-models-of-computation" class="headiing">Chap 1 Models of Computation</h2>
+                    <h3 id="1-3-turing-machines" class="headiing">1.3 Turing Machines</h3>
+                    <ul>
+                    <li>The main value of Turing machines, compared to the word RAM, is their mathematical simplicity.</li>
+                    <li><p>The Turing machines is compared to a worker that has a paper divided into squares. He&#39;s job is to to puts a symbol in a square. He can only look at one square at a time and it has no memory of the previous square. The worker has  a set of instructions that define which symbol goes in the square it is on.</p>
+                    </li>
+                    <li><p>Qualities of Turing machines:</p>
+                    <ul>
+                    <li>It&#39;s mathematically simplistic because it has a few operations  and it has  no advanced mathematical assumptions.</li>
+                    <li>Algorithms that can run in the word RAM can run in the Turing machine.</li>
+                    <li>To design algorithms on a Turing machine it is best to use the multi-tape version.</li>
+                    </ul>
+                    </li>
+                    </ul>
+                    <h3 id="1-4-real-models-of-computation" class="headiing">1.4 Real Models of Computation</h3>
+                    <p>Real models of computation are abstract models were real numbers(1,2,3) are treated as basic objects of computation, instead of being floating point numbers.</p>
+                    <h3 id="pros" class="headiing">Pros</h3>
+                    <ul>
+                    <li>No worries about rounding, precision loss or point errors.</li>
+                    <li>Simplifies problems.</li>
+                    </ul>
+                    <h3 id="cons" class="headiing">Cons</h3>
+                    <ul>
+                    <li>They do not reflect the reality of working in physical machines.</li>
+                    </ul>
+                    <p>A word RAM can be extended to real by adding more storage to store real numbers and arithmetic operations are added ot the instruction set.</p>
+                    <p>The same can be said for a real turning machine, by adding more tape for real numbers and the instruction set is given rules for real numbers.</p>
+                    <h3 id="1-5-cheating-with-the-real-ram" class="headiing">1.5 Cheating with the Real RAM</h3>
+                    <p> Cheating means encoding a large amount of data into one real number and manipulating it using constant-time operations, which  reduces computations that would take exponential time into polynomial time.</p>
+                    <p>One option of cheating would be rounding. </p>
+                    
+                    <h3 id="1-6-relation-between-real-and-discrete-computations" class="headiing">1.6 Relation between Real and Discrete Computations</h3>
+                        <p>An oracle is a black-box function that can be queried in a single computational step. For any input, it returns  yes or no.</p>
+                        <p>A straight-line program is one  without loops or conditionals</p>
+                        <p>The theorem that proves that polynomial computation can be run on both is 
+                            <math xmlns="http://www.w3.org/1998/Math/MathML">
+                                <msup>
+                                    <mi>P</mi>
+                                    <mtext>PosSLP</mtext>
+                                </msup>
+                                <mo>=</mo>
+                                <mi>P</mi>
+                                <mi>R</mi>
+                                </math>
+
+                        </p>
+                    
+                    <h2 id="conclusion" class="headiing">Conclusion</h2>
+                        <p>In conclusion I have discussed the connection between the word RAM and the Turing machine. This brings to a close the summary series of this paper. </p>
+                        <p>Link to the paper:<a href="https://arxiv.org/pdf/2603.29427">https://arxiv.org/pdf/2603.29427</a></p>
+
+
+         
+            </div>
+        </div>
+    </div>
+     
+ </body>
+ </html>
