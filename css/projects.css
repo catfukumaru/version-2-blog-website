@@ -104,7 +104,6 @@ body{
 
   border-radius: 45px;
   height: 50px;
-  border-width: 2px;
   
 
 }
@@ -138,14 +137,14 @@ hr{
   /* width:100%; */
   
   margin:0 auto;
-  color: black ;
+  color: white ;
   border-top: 1px solid;
   opacity: 0.2;
   
 }
 
 
-#project_section{
+.project_section{
   
   /* display: grid;
   grid-template-columns: 0.3fr 2.4fr 0.3fr;
@@ -164,14 +163,14 @@ hr{
   border-radius: 45px;
   width: 80%;
   place-self: center; */
-    background-color: black;
+    
     width: 100%;
-    height: 15vh;
-    margin: 5vh auto;
-    color: white;
+    height: 10vh;
+    
+    
     display: flex;
     justify-content: start;
-    align-items: center;
+    align-items: left;
     border-radius: 16px;
     box-sizing: border-box;
     
@@ -179,9 +178,10 @@ hr{
 
 
 /* on click have it slide covering the description and then change the text to ready to learn more */
-#project_section .project_title {
+.project_section .project_title {
+  background-color: black;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
 
   grid-area: project_title;
@@ -189,57 +189,65 @@ hr{
   font-size: clamp(0.3rem, 1.9vw, 1rem);
   
   text-align: left;
+  color: white;
+
+  border: none;
 
 
-  background-color: white;
-  color: #000000;
-  border-radius: 16px;
-  height: 14vh;
-  width: max-content;
-  margin-right: 20px;
+  /* border-radius: 16px; */
+  height: 10vh;
+  /* width: max-content; */
+  /* margin-right: 20px; */
   padding: 0px 20px 0px 20px;
-  border-color: black ;
+  /* border-color: black ;
   border-style: solid;
-  border-width: 4px;
+  border-width: 4px; */
   /* This timing applies on the way OUT */
+ 
 
 
   
 }
-#project_section .project_title:hover {
+
+
+.project_section .project_description {
+
+    color: black;
+    background-color: rgba(0, 0, 0, 0.6);
+
+    max-width: 0;
+    opacity: 0;
+    overflow: hidden;
+    
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+    font-family: 'CruffySans';
+    padding: 0px 20px 0px 10px;
+    margin-left: 20px;
+    
+    font-size: 2.5vw;
+
+    transition: max-width 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+.project_section .project_description.active {
+
+    max-width: 500px;
+    opacity: 1;
+    border-color: black;
+    border-width: 2px;
+
+}
+
+
+.project_section .project_title:hover{
   
-  width:100vw; 
-  margin-right: 0px;
   cursor: pointer;
   opacity: 0.6;
-  
 
-}
-
-
-
-
-
-
-#project_section .project_description {
-  align-self: center;
-  grid-area: project_description;
-  font-family: 'CruffySans';
-  font-size: 2vw;
-  margin-right: 20px;
-
-  
-
- 
-}
-
-#project_section:hover .project_description{ 
-  /* the text disappear on hover no matter where the mouse is  */
-  opacity: 0;
-  display:none;
-  width:0vw;
-  margin-right: 0px;
-
+  color:rgb(228, 226, 226);
 
 }
 
@@ -249,12 +257,20 @@ hr{
 
 
 
-#project_section .project_date {
+
+
+
+
+
+
+
+
+/* #project_section .project_date {
   align-self: center;
   grid-area: project_date;
   font-family: 'CruffySans';
   font-size: 2vw;
-}
+} */
 
 
 .pagination{
