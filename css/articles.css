@@ -243,7 +243,9 @@ hr{
 
 }
 
-
+#project_section .project_description.active {
+    display: block;
+}
 
 
 
@@ -254,6 +256,7 @@ hr{
   grid-area: project_date;
   font-family: 'CruffySans';
   font-size: 2vw;
+
 }
 
 

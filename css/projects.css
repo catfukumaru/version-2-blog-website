@@ -71,25 +71,7 @@ body{
 
 
 #hero_section .menu{
-/* move the menut to the left*/
-  /* justify-self: end; 
-  align-self: start; 
-  grid-area: menu;
 
-  background-color: white;
-   color: black; 
-
-   font-family: 'AHN'; */
-
-
-   /* colour of the text */
-   /* border-radius: 62.18px;
-   padding: 10px 29px; */
-   /*  the space between the text and the border of a button: height, width */
-   /* text-align: center;
-   font-size: 15px;
-   border-width: 2px; */
-   /* border thickness */
 
   text-align: center;
   white-space: nowrap;
@@ -144,7 +126,7 @@ hr{
 }
 
 
-.project_section{
+/* .project_section{
   
   /* display: grid;
   grid-template-columns: 0.3fr 2.4fr 0.3fr;
@@ -162,8 +144,7 @@ hr{
   margin: 40px 0px;
   border-radius: 45px;
   width: 80%;
-  place-self: center; */
-    
+  place-self: center; 
     width: 100%;
     height: 10vh;
     
@@ -175,10 +156,11 @@ hr{
     box-sizing: border-box;
     
 }
-
+*/
+    
 
 /* on click have it slide covering the description and then change the text to ready to learn more */
-.project_section .project_title {
+/* .project_section .project_title {
   background-color: black;
   display: flex;
   justify-content: left;
@@ -191,14 +173,14 @@ hr{
   text-align: left;
   color: white;
 
-  border: none;
-
+  border: none; */
+  
 
   /* border-radius: 16px; */
-  height: 10vh;
+  /* height: 10vh; */
   /* width: max-content; */
   /* margin-right: 20px; */
-  padding: 0px 20px 0px 20px;
+  /* padding: 0px 20px 0px 20px; */
   /* border-color: black ;
   border-style: solid;
   border-width: 4px; */
@@ -206,18 +188,20 @@ hr{
  
 
 
-  
-}
+/*   
+} */
 
-
+/* 
 .project_section .project_description {
+  flex: 1;
 
-    color: black;
-    background-color: rgba(0, 0, 0, 0.6);
-
+    color: rgb(0, 0, 0);
+    /* background-color: rgba(0, 0, 0, 0.6); */
+/* 
     max-width: 0;
     opacity: 0;
     overflow: hidden;
+
     
     display: flex;
     justify-content: left;
@@ -230,16 +214,31 @@ hr{
     font-size: 2.5vw;
 
     transition: max-width 1s ease-in-out, opacity 1s ease-in-out;
-}
 
-.project_section .project_description.active {
+    border-style: double;
+    border-color: rgba(0, 0, 0, 0.6); ;
+    border-width: 2px;
+    border-radius: 16px;
+
+     */
+/* } */
+ 
+
+/* .project_section .project_description.active {
 
     max-width: 500px;
     opacity: 1;
-    border-color: black;
-    border-width: 2px;
+    border-color: rgba(0, 0, 0, 0.6); ;
+    border-width: 1px;
+    border-radius: 16px;
+    border-style: double;
 
-}
+} */
+ 
+
+
+
+
 
 
 .project_section .project_title:hover{
@@ -251,8 +250,88 @@ hr{
 
 }
 
+/* here is the fix for the dynamic expansion of project_description 👇🏻 */
 
 
+.project_section {
+    width: 100%;
+    height: 10vh;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: left;
+    border-radius: 16px;
+    box-sizing: border-box;
+}
+
+.project_section .project_title {
+    background-color: black;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+    flex-shrink: 0;
+
+    font-family: 'GeistMono';
+    font-size: clamp(0.3rem, 1.9vw, 1rem);
+    text-align: left;
+    color: white;
+
+    border: none;
+    height: 10vh;
+    padding: 0 20px;
+    width:
+}
+
+.project_section .project_description {
+    color: black;
+
+    flex: 1;
+    min-width: 0;
+    opacity: 0;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+    font-family: 'CruffySans';
+    padding: 0 20px 0 10px;
+    margin-left: 10vw;
+
+    font-size: clamp(0.3rem, 1.9vw, 1rem);
+
+    transition: opacity 1s cubic-bezier(0.60, 0, 0.10, 0.6);
+    border-color: rgba(0, 0, 0, 0.9); ;
+    border-width: 2px;
+    border-radius: 16px;
+    border-style: solid;
+    height: fit-content;
+
+    /* justify-content: flex-end; */
+}
+
+.project_section .project_description.active {
+    opacity: 1;
+    border-color: rgba(0, 0, 0, 1.0); ;
+    border-width: 2px;
+    border-radius: 16px;
+    border-style: solid;
+    height: fit-content;
+}
+
+
+
+/* here is the fix for the dynamic expansion of project_description 👇🏻 */
+
+
+
+
+img{
+  height: 5vw;
+  height: 5vw;
+  padding: 2vw 1vw;
+}
 
 
 
